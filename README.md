@@ -49,3 +49,20 @@ Data catatan pada aplikasi ini masih disimpan **di dalam memori (in-memory)** me
   Menangani logika bisnis (CRUD) catatan dan menyimpan data di memori.
 
 ---
+
+## Data Validation
+
+Aplikasi ini menerapkan **validasi data** menggunakan **Joi** untuk memastikan data yang dikirim oleh client sesuai dengan skema yang telah ditentukan.
+
+Validasi dilakukan pada:
+
+- Payload request saat menambahkan catatan
+- Payload request saat memperbarui catatan
+
+Dengan menggunakan Joi, aplikasi dapat:
+
+- Mencegah data tidak valid masuk ke sistem
+- Memberikan response error yang lebih jelas dan terstruktur kepada client
+- Menjaga konsistensi data pada Notes API
+
+Validasi ini diintegrasikan ke dalam **plugin Notes** sehingga tetap selaras dengan konsep modularisasi pada Hapi Framework.
